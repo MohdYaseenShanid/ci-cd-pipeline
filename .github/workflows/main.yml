@@ -17,9 +17,14 @@ jobs:
           node-version: '18'
       - name: Install dependencies
         run: npm install
+
+      # --- ADD THIS NEW STEP HERE ---
+      - name: Add execute permission to scripts
+        run: chmod -R +x ./node_modules/.bin/
+      # --------------------------------
+
       - name: Run linter
         run: npm run lint
-
   # Modified Job: This job now depends on the 'lint' job
   build-and-push:
     # This line makes it wait for the 'lint' job to succeed
