@@ -35,4 +35,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: mohammadyaseenshanid/nodejs-demo-app:latest
+          tags: shanidap/nodejs-demo-app:latest
